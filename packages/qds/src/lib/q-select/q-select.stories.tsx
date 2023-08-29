@@ -3,7 +3,7 @@ import { Fragment } from 'react';
 
 import { QSelect } from './q-select';
 
-import QGlobal from '../qds';
+import { QGlobalStyles } from '../qds';
 import { Colors } from '../theme';
 
 const meta: Meta<typeof QSelect> = {
@@ -35,7 +35,7 @@ export const Select: Story = {
   },
   render: (args) => (
     <Fragment>
-      <QGlobal></QGlobal>
+      <QGlobalStyles></QGlobalStyles>
       <QSelect
         options={args.options}
         color={args.color}

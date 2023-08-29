@@ -15,14 +15,14 @@ const QSelectStyles = styled.div.attrs(
   > div.toggle {
     color: ${(props) => props.$color};
     border: ${borderWidth} solid ${(props) => props.$color};
-    font-size: 1em;
     padding: ${Spacers['2']} ${Spacers['3']};
     max-width: 100px;
     border-radius: ${borderRadius};
-    display: block;
+    display: flex;
     cursor: pointer;
-    transition: all 0.1s ease-in-out;
     position: relative;
+    box-shadow: inset -1px 1px 1px 0px ${(props) => props.$color};
+    transition: all 0.2s ease-in-out;
 
     &::after {
       margin-left: ${Spacers['3']};
@@ -35,21 +35,17 @@ const QSelectStyles = styled.div.attrs(
     }
 
     &:hover {
-      box-shadow: 0px -1px 2px -1px ${(props) => props.$color} inset;
-
-      &::after {
-        transform: rotateX(360deg);
-        font-weight: bold;
-      }
+      translate: 1px 1px;
+      box-shadow: inset 1px -1px 1px 0px ${(props) => props.$color};
     }
   }
 
   > ul {
     z-index: 2;
     position: absolute;
-    top: 100%;
+    top: calc(100% + ${Spacers['1']});
     min-width: 100%;
-    border: 1px solid ${(props) => props.$color};
+    border: ${borderWidth} solid ${(props) => props.$color};
     background-color: ${Colors.white};
     display: none;
     cursor: pointer;

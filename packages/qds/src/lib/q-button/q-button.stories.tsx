@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 import { ButtonSizes, QButton } from './q-button';
 
-import { QGlobal } from '../qds';
+import { QGlobalStyles } from '../qds';
 import { Colors } from '../theme';
 
 const meta: Meta<typeof QButton> = {
@@ -34,7 +34,7 @@ type Story = StoryObj<typeof QButton>;
 export const Button: Story = {
   render: (args) => (
     <Fragment>
-      <QGlobal></QGlobal>
+      <QGlobalStyles></QGlobalStyles>
       <QButton
         buttonText={args.buttonText}
         size={args.size}

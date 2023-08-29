@@ -21,3 +21,10 @@ export const fontStackSans = `${[
 ].join(', ')}`;
 
 export const fontStackSerif = "'Lora', serif";
+
+export const baseFontSizeMagnitude = 1;
+export const baseFontSizeDimension = 'rem';
+
+export const baseFontLineHeight = 1.5;
+
+export const baseFontSize = `${baseFontSizeMagnitude}${baseFontSizeDimension}`;
