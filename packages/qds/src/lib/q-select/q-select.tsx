@@ -16,8 +16,8 @@ const QSelectStyles = styled.div.attrs(
     color: ${(props) => props.$color};
     border: ${borderWidth} solid ${(props) => props.$color};
     font-size: 1em;
-    padding: ${Spacers['3']};
-    width: 100px;
+    padding: ${Spacers['2']} ${Spacers['3']};
+    max-width: 100px;
     border-radius: ${borderRadius};
     display: block;
     cursor: pointer;
@@ -25,21 +25,20 @@ const QSelectStyles = styled.div.attrs(
     position: relative;
 
     &::after {
-      transition: all 0.1s ease-in-out;
+      margin-left: ${Spacers['3']};
+      transition: all 0.5s ease-in-out;
       content: '↓';
-      width: 32px;
+      width: 24px;
       text-align: center;
       font-size: medium;
-      position: absolute;
-      right: 0;
+      display: inline-block;
     }
 
     &:hover {
       box-shadow: 0px -1px 2px -1px ${(props) => props.$color} inset;
 
       &::after {
-        font-size: x-large;
-        translate: 0 -4px;
+        transform: rotateX(360deg);
         font-weight: bold;
       }
     }
@@ -49,7 +48,7 @@ const QSelectStyles = styled.div.attrs(
     z-index: 2;
     position: absolute;
     top: 100%;
-    width: 100%;
+    min-width: 100%;
     border: 1px solid ${(props) => props.$color};
     background-color: ${Colors.white};
     display: none;

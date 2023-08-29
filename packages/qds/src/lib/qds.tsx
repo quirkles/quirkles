@@ -1,7 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 import { PropsWithChildren } from 'react';
 
-import { Colors } from './theme';
+import { Colors, fontStackSans, fontStackSerif } from './theme';
 
 /* eslint-disable-next-line */
 export interface QdsProps extends PropsWithChildren{}
@@ -12,11 +12,17 @@ export const QGlobal = createGlobalStyle`
     height: 100%;
     width: 100%;
 
+
     * {
+      font-family: ${fontStackSans};
       margin: 0;
       padding: 0;
       border: none;
       background: none;
+
+      &.font-serif {
+        font-family: ${fontStackSerif};
+      }
 
       ul {
         display: block;

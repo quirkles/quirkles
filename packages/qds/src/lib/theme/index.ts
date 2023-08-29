@@ -1,5 +1,6 @@
 export * from './colors';
 export * from './borders';
+export * from './fonts';
 
 const baseSpacerSize = 1;
 const baseSpacerUnit = 'rem';
