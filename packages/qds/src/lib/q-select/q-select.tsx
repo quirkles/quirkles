@@ -15,14 +15,14 @@ const QSelectStyles = styled.div.attrs(
   > div.toggle {
     color: ${(props) => props.$color};
     border: ${borderWidth} solid ${(props) => props.$color};
-    padding: ${Spacers['2']} ${Spacers['3']};
+    padding: ${Spacers['3']} ${Spacers['4']};
     max-width: 100px;
     border-radius: ${borderRadius};
     display: flex;
     cursor: pointer;
     position: relative;
-    box-shadow: inset -1px 1px 1px 0px ${(props) => props.$color};
     transition: all 0.2s ease-in-out;
+    box-shadow: inset 1px -1px 1px 0px ${(props) => props.$color};
 
     &::after {
       margin-left: ${Spacers['3']};
@@ -35,8 +35,8 @@ const QSelectStyles = styled.div.attrs(
     }
 
     &:hover {
+      box-shadow: inset 0.5px -0.5px 0.5px 0px ${(props) => props.$color};
       translate: 1px 1px;
-      box-shadow: inset 1px -1px 1px 0px ${(props) => props.$color};
     }
   }
 
@@ -44,7 +44,8 @@ const QSelectStyles = styled.div.attrs(
     z-index: 2;
     position: absolute;
     top: calc(100% + ${Spacers['1']});
-    min-width: 100%;
+    left: ${borderWidth};
+    min-width: calc(100% + ${Spacers['3']});
     border: ${borderWidth} solid ${(props) => props.$color};
     background-color: ${Colors.white};
     display: none;
@@ -61,6 +62,10 @@ const QSelectStyles = styled.div.attrs(
   }
 
   &.is-open {
+    div.toggle {
+      box-shadow: none;
+      translate: 2px 2px;
+    }
     > ul {
       display: flex;
       flex-direction: column;

@@ -35,13 +35,13 @@ const StyledQButton = styled.button.attrs(
   display: block;
   cursor: pointer;
   transition: all 0.1s ease-in-out;
-  box-shadow: inset -0.1em -0.1em ${(props) => props.$color};
+  box-shadow: inset 1px -1px 1px 0px ${(props) => props.$color};
   &:hover {
-    box-shadow: inset 0.025em 0.025em ${(props) => props.$color};
-    translate: 0.05em 0.05em;
+    box-shadow: inset 0.5px -0.5px 0.5px 0px ${(props) => props.$color};
+    translate: 1px 1px;
     &.is-depressed {
-      box-shadow: inset 0.05em 0.05em ${(props) => props.$color};
-      translate: 0.1em 0.1em;
+      box-shadow: none;
+      translate: 2px 2px;
     }
   }
 `;
