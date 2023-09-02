@@ -2,7 +2,7 @@ import { createGlobalStyle } from 'styled-components';
 
 import {
   baseFontLineHeight,
-  baseFontSize,
+  FontSizes,
   Colors,
   fontStackSans,
   fontStackSerif,
@@ -20,11 +20,11 @@ export const QGlobalStyles = createGlobalStyle`
 
       margin: 0;
       font-family: ${fontStackSans};
-      font-size: ${baseFontSize};
+      font-size: ${FontSizes.base};
       font-weight: 400;
       line-height: ${baseFontLineHeight};
       color: ${Colors.gray900};
-      background-color: ${Colors.white};
+      background-color: ${Colors.gray100};
       -webkit-text-size-adjust: 100%;
       -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     }
@@ -83,7 +83,7 @@ export const QGlobalStyles = createGlobalStyle`
 
     p {
       margin-top: 0;
-      margin-bottom: ${Spacers['3']};
+      margin-bottom: ${Spacers.base};
     }
 
     *,

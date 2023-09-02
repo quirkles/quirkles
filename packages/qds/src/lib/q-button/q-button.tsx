@@ -3,7 +3,7 @@ import React, { SyntheticEvent, useState } from 'react';
 
 import { PickOptional } from '@quirkles/type-utils';
 
-import { Colors, Color, Spacers, borderWidth, borderRadius } from '../theme';
+import { Colors, Color, Spacers, BorderWidth, borderRadius } from '../theme';
 
 export const ButtonSizes = {
   small: '#small',
@@ -28,7 +28,7 @@ const StyledQButton = styled.button.attrs(
   }),
 )<{ $color?: Color; $size?: ButtonSize }>`
   color: ${(props) => props.$color};
-  border: ${borderWidth} solid ${(props) => props.$color};
+  border: ${BorderWidth.base} solid ${(props) => props.$color};
   font-size: 1em;
   padding: ${(props) => getButtonPaddingFromSize(props.$size as ButtonSize)};
   border-radius: ${borderRadius};
@@ -80,10 +80,10 @@ export default QButton;
 function getButtonPaddingFromSize(buttonSize: ButtonSize): string {
   switch (buttonSize) {
     case 'large':
-      return `${Spacers['4']} ${Spacers['5']}`;
+      return `${Spacers.large} ${Spacers.xLarge}`;
     case 'medium':
-      return `${Spacers['3']} ${Spacers['4']}`;
+      return `${Spacers.base} ${Spacers.large}`;
     case 'small':
-      return `${Spacers['2']} ${Spacers['3']}`;
+      return `${Spacers.small} ${Spacers.base}`;
   }
 }

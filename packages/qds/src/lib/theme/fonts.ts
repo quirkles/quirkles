@@ -27,4 +27,10 @@ export const baseFontSizeDimension = 'rem';
 
 export const baseFontLineHeight = 1.5;
 
-export const baseFontSize = `${baseFontSizeMagnitude}${baseFontSizeDimension}`;
+export const FontSizes = {
+  xLarge: `${3 * baseFontSizeMagnitude}${baseFontSizeDimension}`,
+  large: `${1.5 * baseFontSizeMagnitude}${baseFontSizeDimension}`,
+  base: `${baseFontSizeMagnitude}${baseFontSizeDimension}`,
+  small: `${0.5 * baseFontSizeMagnitude}${baseFontSizeDimension}`,
+  xSmall: `${0.25 * baseFontSizeMagnitude}${baseFontSizeDimension}`,
+} as const;

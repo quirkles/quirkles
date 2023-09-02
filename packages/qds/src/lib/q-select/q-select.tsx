@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import { useState } from 'react';
 
-import { Colors, Color, Spacers, borderWidth, borderRadius } from '../theme';
+import { Colors, Color, Spacers, borderRadius, BorderWidth } from '../theme';
 import { ButtonSize } from '../q-button/q-button';
 
 const QSelectStyles = styled.div.attrs(
@@ -14,8 +14,8 @@ const QSelectStyles = styled.div.attrs(
   position: relative;
   > div.toggle {
     color: ${(props) => props.$color};
-    border: ${borderWidth} solid ${(props) => props.$color};
-    padding: ${Spacers['3']} ${Spacers['4']};
+    border: ${BorderWidth.base} solid ${(props) => props.$color};
+    padding: ${Spacers.base} ${Spacers.base};
     max-width: 100px;
     border-radius: ${borderRadius};
     display: flex;
@@ -25,7 +25,7 @@ const QSelectStyles = styled.div.attrs(
     box-shadow: inset 1px -1px 1px 0px ${(props) => props.$color};
 
     &::after {
-      margin-left: ${Spacers['3']};
+      margin-left: ${Spacers.base};
       transition: all 0.5s ease-in-out;
       content: '↓';
       width: 24px;
@@ -43,17 +43,17 @@ const QSelectStyles = styled.div.attrs(
   > ul {
     z-index: 2;
     position: absolute;
-    top: calc(100% + ${Spacers['1']});
-    left: ${borderWidth};
-    min-width: calc(100% + ${Spacers['3']});
-    border: ${borderWidth} solid ${(props) => props.$color};
+    top: calc(100% + ${Spacers.xSmall});
+    left: ${BorderWidth.base};
+    min-width: calc(100% + ${Spacers.base});
+    border: ${BorderWidth.base} solid ${(props) => props.$color};
     background-color: ${Colors.white};
     display: none;
     cursor: pointer;
     color: ${(props) => props.$color};
 
     li {
-      padding: ${Spacers['3']};
+      padding: ${Spacers.base};
 
       &:hover {
         background-color: ${(props) => props.$color}20;

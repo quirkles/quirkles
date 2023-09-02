@@ -3,7 +3,14 @@ import React from 'react';
 
 import { PickOptional } from '@quirkles/type-utils';
 
-import { Color, Colors, fontStackSans, fontStackSerif } from '../theme';
+import {
+  BorderWidth,
+  Color,
+  Colors,
+  fontStackSans,
+  fontStackSerif,
+  Spacers,
+} from '../theme';
 
 type HeadingLevel = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
 
@@ -24,6 +31,17 @@ const defaultProps: PickOptional<QHeadingProps> = {
 const StyledQHeading = styled.div<{ $color: Color; $serif: boolean }>`
   color: ${(props) => Colors[props.$color]};
   font-family: ${(props) => (props.$serif ? fontStackSerif : fontStackSans)};
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: bold;
+    margin-bottom: ${Spacers.xSmall};
+    padding-bottom: ${Spacers.xSmall};
+    border-bottom: ${BorderWidth.base} solid ${(props) => Colors[props.$color]};
+  }
 `;
 
 export function QHeading(props: QHeadingProps) {
@@ -31,7 +49,6 @@ export function QHeading(props: QHeadingProps) {
     ...defaultProps,
     ...props,
   } as Required<QHeadingProps>;
-  debugger;
   return (
     <StyledQHeading $serif={serif} $color={color}>
       <Tag tag={headingLevel} text={headingText} />

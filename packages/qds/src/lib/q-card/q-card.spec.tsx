@@ -1,10 +1,12 @@
 import { render } from '@testing-library/react';
 
-import QHeading from './q-heading';
+import QCard from './q-card';
 
-describe('QHeading', () => {
+describe('QCard', () => {
+  
   it('should render successfully', () => {
-    const { baseElement } = render(<QHeading headingText={'test'} />);
+    const { baseElement } = render(<QCard />);
     expect(baseElement).toBeTruthy();
   });
+  
 });
