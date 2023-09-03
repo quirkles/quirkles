@@ -20,3 +20,14 @@ export const boxShadowLg = '0 0 45px 0 rgba(0, 0, 0, 0.12)';
 export const boxShadowInset = 'inset 0 1px 2px rgba(0, 0, 0, 0.075)';
 
 export type Spacer = keyof typeof Spacers;
+
+export const Breakpoints = {
+  xs: '0',
+  sm: '576px',
+  md: '768px',
+  lg: '992px',
+  xl: '1200px',
+  xxl: '1400px',
+} as const;
+
+export type Breakpoint = keyof typeof Breakpoints;
