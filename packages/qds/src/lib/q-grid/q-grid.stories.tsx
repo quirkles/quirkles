@@ -29,6 +29,13 @@ export const Primary = {
             >
               <div style={{ backgroundColor: Colors.gray500 }}>
                 <p>column</p>
+                <code>
+                  widthDefault={12}
+                  widthSm={6}
+                  widthLg={4}
+                  widthXl={3}
+                  widthXxl={2}
+                </code>
               </div>
             </QColumn>
           </QRow>
