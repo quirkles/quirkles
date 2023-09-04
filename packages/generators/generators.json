@@ -1,0 +1,9 @@
+{
+  "generators": {
+    "react-frontend-themed": {
+      "factory": "./src/generators/react-frontend-themed/generator",
+      "schema": "./src/generators/react-frontend-themed/schema.json",
+      "description": "react-frontend-themed generator"
+    }
+  }
+}
