@@ -11,7 +11,7 @@ export async function reactFrontendThemedGenerator(
   tree: Tree,
   options: ReactFrontendThemedGeneratorSchema
 ) {
-  const projectRoot = `libs/${options.name}`;
+  const projectRoot = `web/${options.name}`;
   addProjectConfiguration(tree, options.name, {
     root: projectRoot,
     projectType: 'library',
