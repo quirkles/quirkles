@@ -14,3 +14,15 @@ reason for this monorepo to exist is the react conponent library, QDS, which
 I intend to build out to make it easier to scaffold frontend applications.
 There is also the advantage of nx generators, making it easy to spin up front
 end projects with a css theme set up.
+
+### Generators
+
+#### Themed react front end application
+
+`npx nx generate @quirkles/generators:react-frontend-themed New-App`
+
+serve it
+
+`npx nx run newapp:serve`
+
+Note: If you run this multiple times youll need to alter the port the dev server listens on to avoid conflicts.
