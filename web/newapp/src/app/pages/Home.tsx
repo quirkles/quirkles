@@ -8,7 +8,7 @@ export function Home() {
           <div className="row">
             <div className="col-12">
               <div className="page-title-box">
-                <h4 className="page-title"><%= name %>: Home</h4>
+                <h4 className="page-title">newapp: Home</h4>
               </div>
             </div>
             <div className="col-12">
