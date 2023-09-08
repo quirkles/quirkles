@@ -1,0 +1,87 @@
+{
+  "name": "theme-demos",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "packages/theme-demos/src",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/webpack:webpack",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "defaultConfiguration": "production",
+      "options": {
+        "outputPath": "dist/packages/theme-demos",
+        "compiler": "swc",
+        "main": "packages/theme-demos/src/main.ts",
+        "tsConfig": "packages/theme-demos/tsconfig.app.json",
+        "webpackConfig": "packages/theme-demos/webpack.config.js",
+        "assets": [
+          "packages/theme-demos/src/favicon.ico",
+          "packages/theme-demos/src/assets"
+        ],
+        "index": "packages/theme-demos/src/index.html",
+        "baseHref": "/",
+        "styles": [
+          "packages/theme-demos/src/styles.css"
+        ],
+        "scripts": []
+      },
+      "configurations": {
+        "production": {
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false,
+          "fileReplacements": [
+            {
+              "replace": "packages/theme-demos/src/environments/environment.ts",
+              "with": "packages/theme-demos/src/environments/environment.prod.ts"
+            }
+          ]
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nx/webpack:dev-server",
+      "options": {
+        "buildTarget": "theme-demos:build"
+      },
+      "configurations": {
+        "production": {
+          "buildTarget": "theme-demos:build:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "packages/theme-demos/**/*.ts"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": [
+        "{workspaceRoot}/coverage/{projectRoot}"
+      ],
+      "options": {
+        "jestConfig": "packages/theme-demos/jest.config.ts",
+        "passWithNoTests": true
+      },
+      "configurations": {
+        "ci": {
+          "ci": true,
+          "codeCoverage": true
+        }
+      }
+    }
+  }
+}
