@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { QGrid } from './q-grid';
 
-import { QDsWrapper } from '../qds';
+import { QDSWrapper } from '../qds';
 import { QRow } from './q-row';
 import { QColumn } from './q-column';
 import { Colors } from '../theme';
@@ -17,7 +17,7 @@ export const Primary = {
   args: {},
   render: () => {
     return (
-      <QDsWrapper>
+      <QDSWrapper>
         <QGrid>
           <QRow>
             <QColumn
@@ -40,7 +40,7 @@ export const Primary = {
             </QColumn>
           </QRow>
         </QGrid>
-      </QDsWrapper>
+      </QDSWrapper>
     );
   },
 };

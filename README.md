@@ -25,4 +25,4 @@ serve it
 
 `npx nx run newapp:serve`
 
-Note: If you run this multiple times youll need to alter the port the dev server listens on to avoid conflicts.
+Note: If you run this multiple times you'll need to alter the port the dev server listens on to avoid conflicts.

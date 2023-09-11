@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 import { ButtonSizes, QButton } from './q-button';
 
-import {QDsWrapper, QGlobalStyles} from '../qds';
+import {QDSWrapper, QGlobalStyles} from '../qds';
 import { Colors } from '../theme';
 
 const meta: Meta<typeof QButton> = {
@@ -33,14 +33,14 @@ type Story = StoryObj<typeof QButton>;
 
 export const Button: Story = {
   render: (args) => (
-    <QDsWrapper>
+    <QDSWrapper>
       <QButton
         buttonText={args.buttonText}
         size={args.size}
         color={args.color}
         onClick={args.onClick}
       ></QButton>
-    </QDsWrapper>
+    </QDSWrapper>
   ),
   args: {
     buttonText: 'Click me!',

@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { QHeading } from './q-heading';
 
 import { Colors } from '../theme';
-import { QDsWrapper } from '../qds';
+import { QDSWrapper } from '../qds';
 
 const meta: Meta<typeof QHeading> = {
   component: QHeading,
@@ -31,14 +31,14 @@ type Story = StoryObj<typeof QHeading>;
 
 export const Primary: Story = {
   render: (args) => (
-    <QDsWrapper>
+    <QDSWrapper>
       <QHeading
         color={args.color}
         serif={args.serif}
         headingLevel={args.headingLevel}
         headingText={args.headingText}
       ></QHeading>
-    </QDsWrapper>
+    </QDSWrapper>
   ),
   args: {
     headingText: 'Watchu mean watchu mean?',

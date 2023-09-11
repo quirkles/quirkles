@@ -2,7 +2,7 @@ import React, { SyntheticEvent } from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 
 import { Colors } from '../theme';
-import { QDsWrapper } from '../qds';
+import { QDSWrapper } from '../qds';
 
 import { QCard } from './q-card';
 import { QButtonProps } from '../q-button/q-button';
@@ -27,7 +27,7 @@ type Story = StoryObj<CardPropsAndCustomArgs>;
 
 export const Primary: Story = {
   render: (args) => (
-    <QDsWrapper>
+    <QDSWrapper>
       <div style={{ maxWidth: '400px' }}>
         <QCard
           title={args.title}
@@ -40,7 +40,7 @@ export const Primary: Story = {
           }}
         ></QCard>
       </div>
-    </QDsWrapper>
+    </QDSWrapper>
   ),
   args: {
     img: {

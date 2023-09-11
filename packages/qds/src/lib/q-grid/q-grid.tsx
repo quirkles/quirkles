@@ -1,6 +1,7 @@
 import styled from 'styled-components';
-import {Breakpoints, Spacers} from '../theme';
 import React from 'react';
+
+import { Breakpoints, Spacers } from '../theme';
 
 type Size = 'xSmall' | 'small' | 'md' | 'large' | 'xLarge' | 'default';
 

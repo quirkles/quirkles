@@ -18,7 +18,7 @@ const StyledQDSWrapper = styled.div`
   }
 `;
 
-export function QDsWrapper(props: React.PropsWithChildren) {
+export function QDSWrapper(props: React.PropsWithChildren) {
   return (
     <React.Fragment>
       <QGlobalStyles></QGlobalStyles>
