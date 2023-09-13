@@ -17,7 +17,7 @@ end projects with a css theme set up.
 
 ## Theme demos 
 
-`mpx mx run theme-demos:serve`
+`npx nx run theme-demos:serve`
 
 ### Generators
 
